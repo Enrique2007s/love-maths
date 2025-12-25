@@ -1,5 +1,5 @@
-/* Wait for the DOM to finish loading before running the game
-get the button elements and event listeners to them*/
+/**  Wait for the DOM to finish loading before running the game
+get the button elements and event listeners to them **/
 
 document.addEventListener("DOMContentLoaded", function() {
     let buttons = document.getElementsByTagName("button");
@@ -16,7 +16,12 @@ document.addEventListener("DOMContentLoaded", function() {
     }
 })
 
+/**the first game "loop", called when the script is first loaded
+ * and after the user's answer has been processed
+ */
 function runGame() {
+    let num1 = Math.floor(Math.random() * 25) + 1;
+    let num2 = Math.floor(Math.random() * 25) + 1;
 }
 function checkAnswer() {
 }
@@ -34,3 +39,4 @@ function displayMultiplyQuestion() {
 }
 function displayDivisionQuestion() { //JavaScript function to display division question
 }
+
