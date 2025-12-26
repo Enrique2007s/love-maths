@@ -81,26 +81,31 @@ function incrementScore() {
     let oldScore = parseInt(document.getElementById("score").innerText);
     document.getElementById("score").innerText = ++oldScore;
 }
+
 /** gets the current incorrect score from the DOM and increments it by 1 */
 function incrementWrongAnswer() {
     let oldScore = parseInt(document.getElementById("incorrect").innerText);
     document.getElementById("incorrect").innerText = ++oldScore;
 }
+
 function displayAdditionQuestion(operand1, operand2) {
     document.getElementById("operand1").textContent = operand1;
     document.getElementById("operand2").textContent = operand2;
     document.getElementById("operator").textContent = "+";
 }
+
 function displaySubtractQuestion(operand1, operand2) {
-    document.getElementById("operand1").textContent = operand1;
-    document.getElementById("operand2").textContent = operand2;
+    document.getElementById("operand1").textContent = operand1 > operand2 ? operand1 : operand2;
+    document.getElementById("operand2").textContent = operand1 > operand2 ? operand2 : operand1;
     document.getElementById("operator").textContent = "-";
 }
+
 function displayMultiplyQuestion(operand1, operand2) {
     document.getElementById("operand1").textContent = operand1;
     document.getElementById("operand2").textContent = operand2;
     document.getElementById("operator").textContent = "×";
 }
+
 function displayDivisionQuestion(operand1, operand2) { 
     document.getElementById("operand1").textContent = operand1;
     document.getElementById("operand2").textContent = operand2;
